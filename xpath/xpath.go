@@ -12,7 +12,7 @@ xmlNode* fetchNode(xmlNodeSet *nodeset, int index) {
 */
 import "C"
 import "unsafe"
-import . "github.com/moovweb/gokogiri/util"
+import . "github.com/fxtentacle/gokogiri/util"
 import "runtime"
 
 type XPath struct {

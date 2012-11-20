@@ -2,7 +2,7 @@ package xml
 
 import (
 	"testing"
-	"github.com/moovweb/gokogiri/help"
+	"github.com/fxtentacle/gokogiri/help"
 )
 
 func TestParseDocumentFragmentBasic(t *testing.T) {
@@ -57,7 +57,7 @@ func TestParseDocumentFragment(t *testing.T) {
 func TestSearchDocumentFragment(t *testing.T) {
 	defer help.CheckXmlMemoryLeaks(t)
 
-	doc, err := Parse([]byte("<moovweb><z/><s/></moovweb>"), DefaultEncodingBytes, nil, DefaultParseOption, DefaultEncodingBytes)
+	doc, err := Parse([]byte("<fxtentacle><z/><s/></fxtentacle>"), DefaultEncodingBytes, nil, DefaultParseOption, DefaultEncodingBytes)
 	if err != nil {
 		t.Error("parsing error:", err.Error())
 		return

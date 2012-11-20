@@ -2,7 +2,7 @@ package html
 
 import (
 	"testing"
-	"github.com/moovweb/gokogiri/help"
+	"github.com/fxtentacle/gokogiri/help"
 )
 
 func TestInnerScript(t *testing.T) {

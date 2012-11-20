@@ -4,7 +4,7 @@ import (
 	"testing"
 	"io/ioutil"
 	"bytes"
-	"github.com/moovweb/gokogiri/help"
+	"github.com/fxtentacle/gokogiri/help"
 )
 
 func TestParseDocument_CP1252(t *testing.T) {
