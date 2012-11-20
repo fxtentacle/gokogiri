@@ -96,6 +96,7 @@ type Node interface {
 	SetContent(interface{}) error
 
 	//
+	NamespacePrefix() string
 	Name() string
 	SetName(string)
 
@@ -516,6 +517,17 @@ func (xmlNode *XmlNode) IsFragment() bool {
 
 }
 */
+
+
+func (xmlNode *XmlNode) NamespacePrefix() (name string) {
+  if xmlNode.Ptr.ns != nil {
+    if xmlNode.Ptr.ns.prefix != nil {
+		  p := unsafe.Pointer(xmlNode.Ptr.ns.prefix)
+		  name = C.GoString((*C.char)(p))
+		}
+	}
+	return
+}
 
 func (xmlNode *XmlNode) Name() (name string) {
 	if xmlNode.Ptr.name != nil {
